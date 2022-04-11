@@ -1,6 +1,5 @@
 package ru.dzimin.coursepapertwo.controller;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,14 +11,15 @@ import ru.dzimin.coursepapertwo.service.QuestionService;
 
 import java.util.Collection;
 
+
 @RestController
-@RequestMapping("exam/java")
-public class JavaQuestionController {
+@RequestMapping("exam/math")
+public class MathQuestionController {
 
     private final QuestionService service;
 
     @Autowired
-    public JavaQuestionController(@Qualifier("Java") QuestionService service) {
+    public MathQuestionController(@Qualifier("Math") QuestionService service) {
         this.service = service;
     }
 
